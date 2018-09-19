@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.95" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.95/virl.xsd">
-    <node name="XR1" type="SIMPLE" subtype="IOS XRv" location="116,8" excludeFromLaunch="true">
+    <node name="XR1" type="SIMPLE" subtype="IOS XRv" location="328,246" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 10:23:31 2018 by cisco
@@ -10,7 +10,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR2" type="SIMPLE" subtype="IOS XRv" location="117,67" excludeFromLaunch="true">
+    <node name="XR2" type="SIMPLE" subtype="IOS XRv" location="329,305" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 16:36:19 2018 by cisco
@@ -20,7 +20,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR3" type="SIMPLE" subtype="IOS XRv" location="115,122" excludeFromLaunch="true">
+    <node name="XR3" type="SIMPLE" subtype="IOS XRv" location="327,360" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 16:36:27 2018 by cisco
@@ -30,7 +30,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR4" type="SIMPLE" subtype="IOS XRv" location="115,175">
+    <node name="XR4" type="SIMPLE" subtype="IOS XRv" location="327,413">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.3
 !! Last configuration change at Fri Aug 31 17:18:32 2018 by cisco
@@ -167,7 +167,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR5" type="SIMPLE" subtype="IOS XRv" location="114,230" excludeFromLaunch="true">
+    <node name="XR5" type="SIMPLE" subtype="IOS XRv" location="326,468" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 16:36:46 2018 by cisco
@@ -177,7 +177,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR21" type="SIMPLE" subtype="IOS XRv" location="115,277">
+    <node name="XR21" type="SIMPLE" subtype="IOS XRv" location="327,515">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.3
 !! Last configuration change at Fri Aug 31 17:18:46 2018 by cisco
@@ -309,7 +309,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR22" type="SIMPLE" subtype="IOS XRv" location="378,450">
+    <node name="XR22" type="SIMPLE" subtype="IOS XRv" location="590,688">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.3
 !! Last configuration change at Fri Aug 31 21:21:08 2018 by cisco
@@ -433,7 +433,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="US1" type="SIMPLE" subtype="Unmanaged Switch" location="311,235">
+    <node name="US1" type="SIMPLE" subtype="Unmanaged Switch" location="523,473">
         <interface id="0" name="link1"/>
         <interface id="1" name="link2"/>
         <interface id="2" name="link3"/>
@@ -450,7 +450,7 @@ end</entry>
         <interface id="13" name="link14"/>
         <interface id="14" name="link15"/>
     </node>
-    <node name="R1" type="SIMPLE" subtype="CSR1000v" location="178,-8">
+    <node name="R1" type="SIMPLE" subtype="CSR1000v" location="356,155">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:10 UTC Fri Aug 31 2018
@@ -727,7 +727,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R2" type="SIMPLE" subtype="CSR1000v" location="230,-11">
+    <node name="R2" type="SIMPLE" subtype="CSR1000v" location="442,227">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 19:02:44 UTC Tue Sep 18 2018
@@ -1020,7 +1020,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R3" type="SIMPLE" subtype="CSR1000v" location="268,-13">
+    <node name="R3" type="SIMPLE" subtype="CSR1000v" location="480,225">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:10 UTC Fri Aug 31 2018
@@ -1268,7 +1268,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R4" type="SIMPLE" subtype="CSR1000v" location="308,-16" excludeFromLaunch="true">
+    <node name="R4" type="SIMPLE" subtype="CSR1000v" location="520,222" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 16:49:33 UTC Thu Aug 23 2018
@@ -1542,7 +1542,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R5" type="SIMPLE" subtype="CSR1000v" location="350,-18">
+    <node name="R5" type="SIMPLE" subtype="CSR1000v" location="565,166">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:09 UTC Fri Aug 31 2018
@@ -1792,7 +1792,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R6" type="SIMPLE" subtype="CSR1000v" location="396,-17">
+    <node name="R6" type="SIMPLE" subtype="CSR1000v" location="606,126">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 17:19:01 UTC Fri Aug 31 2018
@@ -2013,7 +2013,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R7" type="SIMPLE" subtype="CSR1000v" location="437,-19" excludeFromLaunch="true">
+    <node name="R7" type="SIMPLE" subtype="CSR1000v" location="649,219" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 10:13:00 UTC Thu Aug 23 2018
@@ -2225,7 +2225,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R8" type="SIMPLE" subtype="CSR1000v" location="478,-20">
+    <node name="R8" type="SIMPLE" subtype="CSR1000v" location="693,166">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 17:23:48 UTC Fri Aug 31 2018
@@ -2439,7 +2439,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R9" type="SIMPLE" subtype="CSR1000v" location="523,-20" excludeFromLaunch="true">
+    <node name="R9" type="SIMPLE" subtype="CSR1000v" location="735,218" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 10:11:27 UTC Thu Aug 23 2018
@@ -2651,7 +2651,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R10" type="SIMPLE" subtype="CSR1000v" location="570,-18" excludeFromLaunch="true">
+    <node name="R10" type="SIMPLE" subtype="CSR1000v" location="782,220" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 10:11:16 UTC Thu Aug 23 2018
@@ -2854,7 +2854,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="US2" type="SIMPLE" subtype="Unmanaged Switch" location="399,228">
+    <node name="US2" type="SIMPLE" subtype="Unmanaged Switch" location="611,466">
         <interface id="0" name="link1"/>
         <interface id="1" name="link2"/>
         <interface id="2" name="link3"/>
@@ -2868,7 +2868,7 @@ end</entry>
         <interface id="10" name="link11"/>
         <interface id="11" name="link12"/>
     </node>
-    <node name="XR11" type="SIMPLE" subtype="IOS XRv" location="166,434" excludeFromLaunch="true">
+    <node name="XR11" type="SIMPLE" subtype="IOS XRv" location="378,672" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 10:23:31 2018 by cisco
@@ -2878,7 +2878,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR12" type="SIMPLE" subtype="IOS XRv" location="206,443" excludeFromLaunch="true">
+    <node name="XR12" type="SIMPLE" subtype="IOS XRv" location="418,681" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 10:23:31 2018 by cisco
@@ -2888,7 +2888,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR15" type="SIMPLE" subtype="IOS XRv" location="331,451" excludeFromLaunch="true">
+    <node name="XR15" type="SIMPLE" subtype="IOS XRv" location="543,689" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 10:23:31 2018 by cisco
@@ -2898,7 +2898,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR13" type="SIMPLE" subtype="IOS XRv" location="244,452" excludeFromLaunch="true">
+    <node name="XR13" type="SIMPLE" subtype="IOS XRv" location="456,690" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
 !! Last configuration change at Thu Aug 23 10:23:31 2018 by cisco
@@ -2908,7 +2908,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="XR14" type="SIMPLE" subtype="IOS XRv" location="288,449">
+    <node name="XR14" type="SIMPLE" subtype="IOS XRv" location="500,687">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.3
 !! Last configuration change at Fri Aug 31 17:21:07 2018 by cisco
@@ -3019,7 +3019,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet0/0/0/0"/>
         <interface id="1" name="GigabitEthernet0/0/0/1"/>
     </node>
-    <node name="US3" type="SIMPLE" subtype="Unmanaged Switch" location="464,226">
+    <node name="US3" type="SIMPLE" subtype="Unmanaged Switch" location="676,464">
         <interface id="0" name="link1"/>
         <interface id="1" name="link2"/>
         <interface id="2" name="link3"/>
@@ -3033,7 +3033,7 @@ end</entry>
         <interface id="10" name="link11"/>
         <interface id="11" name="link12"/>
     </node>
-    <node name="R11" type="SIMPLE" subtype="CSR1000v" location="613,15">
+    <node name="R11" type="SIMPLE" subtype="CSR1000v" location="898,200">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:14 UTC Fri Aug 31 2018
@@ -3301,7 +3301,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R12" type="SIMPLE" subtype="CSR1000v" location="650,47">
+    <node name="R12" type="SIMPLE" subtype="CSR1000v" location="852,317">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 19:18:58 UTC Tue Sep 18 2018
@@ -3586,7 +3586,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R13" type="SIMPLE" subtype="CSR1000v" location="680,71">
+    <node name="R13" type="SIMPLE" subtype="CSR1000v" location="884,340">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:14 UTC Fri Aug 31 2018
@@ -3829,11 +3829,11 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R14" type="SIMPLE" subtype="CSR1000v" location="713,107" excludeFromLaunch="true">
+    <node name="R14" type="SIMPLE" subtype="CSR1000v" location="913,370" excludeFromLaunch="true">
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R15" type="SIMPLE" subtype="CSR1000v" location="732,146">
+    <node name="R15" type="SIMPLE" subtype="CSR1000v" location="1055,368">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:14 UTC Fri Aug 31 2018
@@ -4062,8 +4062,9 @@ line vty 2 4
 end</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="US4" type="SIMPLE" subtype="Unmanaged Switch" location="526,223">
+    <node name="US4" type="SIMPLE" subtype="Unmanaged Switch" location="738,461">
         <interface id="0" name="link1"/>
         <interface id="1" name="link2"/>
         <interface id="2" name="link3"/>
@@ -4080,10 +4081,10 @@ end</entry>
         <interface id="13" name="link14"/>
         <interface id="14" name="link15"/>
     </node>
-    <node name="R37" type="SIMPLE" subtype="CSR1000v" location="501,507" excludeFromLaunch="true">
+    <node name="R37" type="SIMPLE" subtype="CSR1000v" location="713,745" excludeFromLaunch="true">
         <interface id="0" name="GigabitEthernet2"/>
     </node>
-    <node name="R36" type="SIMPLE" subtype="CSR1000v" location="542,453">
+    <node name="R36" type="SIMPLE" subtype="CSR1000v" location="754,691">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:15 UTC Fri Aug 31 2018
@@ -4253,7 +4254,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R33" type="SIMPLE" subtype="CSR1000v" location="570,407">
+    <node name="R33" type="SIMPLE" subtype="CSR1000v" location="782,645">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 17:07:50 UTC Fri Aug 31 2018
@@ -4438,7 +4439,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R32" type="SIMPLE" subtype="CSR1000v" location="592,365">
+    <node name="R32" type="SIMPLE" subtype="CSR1000v" location="804,603">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 17:07:50 UTC Fri Aug 31 2018
@@ -4623,7 +4624,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R31" type="SIMPLE" subtype="CSR1000v" location="606,317">
+    <node name="R31" type="SIMPLE" subtype="CSR1000v" location="818,555">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:16 UTC Fri Aug 31 2018
@@ -4847,7 +4848,7 @@ end</entry>
         <interface id="0" name="GigabitEthernet2"/>
         <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R16" type="SIMPLE" subtype="CSR1000v" location="753,183">
+    <node name="R16" type="SIMPLE" subtype="CSR1000v" location="1000,418">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:16 UTC Fri Aug 31 2018
@@ -5025,8 +5026,9 @@ line vty 0 4
 end</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R17" type="SIMPLE" subtype="CSR1000v" location="754,234" excludeFromLaunch="true">
+    <node name="R17" type="SIMPLE" subtype="CSR1000v" location="960,454" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">hostname R17
 no ip domain lookup
@@ -5037,7 +5039,7 @@ line con 0
         </extensions>
         <interface id="0" name="GigabitEthernet2"/>
     </node>
-    <node name="R18" type="SIMPLE" subtype="CSR1000v" location="732,267">
+    <node name="R18" type="SIMPLE" subtype="CSR1000v" location="1055,496">
         <extensions>
             <entry key="config" type="String">!
 ! Last configuration change at 21:30:17 UTC Fri Aug 31 2018
@@ -5215,8 +5217,9 @@ line vty 0 4
 end</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
     </node>
-    <node name="R19" type="SIMPLE" subtype="CSR1000v" location="702,333" excludeFromLaunch="true">
+    <node name="R19" type="SIMPLE" subtype="CSR1000v" location="914,571" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">hostname R19
 no ip domain lookup
@@ -5246,10 +5249,7 @@ line con 0
     <connection dst="/virl:topology/virl:node[19]/virl:interface[8]" src="/virl:topology/virl:node[16]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[19]/virl:interface[9]" src="/virl:topology/virl:node[17]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[19]/virl:interface[10]" src="/virl:topology/virl:node[18]/virl:interface[1]"/>
-    <connection dst="/virl:topology/virl:node[10]/virl:interface[2]" src="/virl:topology/virl:node[9]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[12]/virl:interface[2]" src="/virl:topology/virl:node[11]/virl:interface[2]"/>
-    <connection dst="/virl:topology/virl:node[14]/virl:interface[2]" src="/virl:topology/virl:node[13]/virl:interface[2]"/>
-    <connection dst="/virl:topology/virl:node[16]/virl:interface[2]" src="/virl:topology/virl:node[15]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[18]/virl:interface[2]" src="/virl:topology/virl:node[17]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[19]/virl:interface[11]" src="/virl:topology/virl:node[8]/virl:interface[11]"/>
     <connection dst="/virl:topology/virl:node[25]/virl:interface[1]" src="/virl:topology/virl:node[19]/virl:interface[12]"/>
@@ -5261,7 +5261,6 @@ line con 0
     <connection dst="/virl:topology/virl:node[25]/virl:interface[7]" src="/virl:topology/virl:node[7]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[21]/virl:interface[2]" src="/virl:topology/virl:node[20]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[24]/virl:interface[2]" src="/virl:topology/virl:node[23]/virl:interface[2]"/>
-    <connection dst="/virl:topology/virl:node[27]/virl:interface[2]" src="/virl:topology/virl:node[26]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[29]/virl:interface[2]" src="/virl:topology/virl:node[28]/virl:interface[2]"/>
     <connection dst="/virl:topology/virl:node[26]/virl:interface[1]" src="/virl:topology/virl:node[31]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[27]/virl:interface[1]" src="/virl:topology/virl:node[31]/virl:interface[2]"/>
@@ -5278,4 +5277,8 @@ line con 0
     <connection dst="/virl:topology/virl:node[31]/virl:interface[13]" src="/virl:topology/virl:node[38]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[31]/virl:interface[14]" src="/virl:topology/virl:node[39]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[31]/virl:interface[15]" src="/virl:topology/virl:node[40]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[14]/virl:interface[2]" src="/virl:topology/virl:node[9]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[16]/virl:interface[2]" src="/virl:topology/virl:node[13]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[26]/virl:interface[2]" src="/virl:topology/virl:node[37]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[39]/virl:interface[2]" src="/virl:topology/virl:node[30]/virl:interface[2]"/>
 </topology>
