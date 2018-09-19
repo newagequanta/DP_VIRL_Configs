@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.9" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.9/virl.xsd">
+<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.95" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.95/virl.xsd">
     <node name="XR1" type="SIMPLE" subtype="IOS XRv" location="116,8" excludeFromLaunch="true">
         <extensions>
             <entry key="config" type="String">!! IOS XR Configuration 6.1.2
@@ -730,7 +730,7 @@ end</entry>
     <node name="R2" type="SIMPLE" subtype="CSR1000v" location="230,-11">
         <extensions>
             <entry key="config" type="String">!
-! Last configuration change at 21:30:10 UTC Fri Aug 31 2018
+! Last configuration change at 19:02:44 UTC Tue Sep 18 2018
 !
 version 16.6
 service timestamps debug datetime msec
@@ -784,6 +784,12 @@ multilink bundle-name authenticated
 !
 !
 !
+crypto pki trustpoint TP-self-signed-2077759905
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2077759905
+ revocation-check none
+ rsakeypair TP-self-signed-2077759905
+!
 crypto pki trustpoint TP-self-signed-2598315546
  enrollment selfsigned
  subject-name cn=IOS-Self-Signed-Certificate-2598315546
@@ -803,8 +809,9 @@ crypto pki trustpoint TP-self-signed-1192733496
  rsakeypair TP-self-signed-1192733496
 !
 !
-crypto pki certificate chain TP-self-signed-2598315546
+crypto pki certificate chain TP-self-signed-2077759905
  certificate self-signed 01 nvram:IOS-Self-Sig#1.cer
+crypto pki certificate chain TP-self-signed-2598315546
 crypto pki certificate chain TP-self-signed-1099787797
 crypto pki certificate chain TP-self-signed-1192733496
 !
@@ -816,7 +823,7 @@ crypto pki certificate chain TP-self-signed-1192733496
 !
 !
 !
-license udi pid CSR1000V sn 9NXXAJGFMMK
+license udi pid CSR1000V sn 9G7V5RAX0SV
 diagnostic bootup level minimal
 spanning-tree extend system-id
 !
@@ -856,7 +863,7 @@ interface Loopback0
  ipv6 router isis 
 !
 interface GigabitEthernet1
- ip address 10.255.0.232 255.255.0.0
+ ip address 10.255.1.146 255.255.0.0
  shutdown
  negotiation auto
  no mop enabled
@@ -939,24 +946,31 @@ router isis
  mpls ldp autoconfig
 !
 router bgp 50
+ template peer-policy VPNV4_CLIENTS
+  route-reflector-client
+  send-community extended
+ exit-peer-policy
+ !
+ template peer-session IBGP_PEERS
+  remote-as 50
+  update-source Loopback0
+ exit-peer-session
+ !
  bgp log-neighbor-changes
  no bgp default ipv4-unicast
- neighbor VPNv4_Clients peer-group
- neighbor VPNv4_Clients remote-as 50
- neighbor VPNv4_Clients update-source Loopback0
- neighbor 1.1.1.1 peer-group VPNv4_Clients
- neighbor 4.4.4.4 peer-group VPNv4_Clients
- neighbor 21.21.21.21 peer-group VPNv4_Clients
+ neighbor 1.1.1.1 inherit peer-session IBGP_PEERS
+ neighbor 21.21.21.21 inherit peer-session IBGP_PEERS
  !
  address-family ipv4
  exit-address-family
  !
  address-family vpnv4
-  neighbor VPNv4_Clients send-community extended
-  neighbor VPNv4_Clients route-reflector-client
   neighbor 1.1.1.1 activate
-  neighbor 4.4.4.4 activate
+  neighbor 1.1.1.1 send-community extended
+  neighbor 1.1.1.1 inherit peer-policy VPNV4_CLIENTS
   neighbor 21.21.21.21 activate
+  neighbor 21.21.21.21 send-community extended
+  neighbor 21.21.21.21 inherit peer-policy VPNV4_CLIENTS
  exit-address-family
 !
 !
@@ -984,13 +998,13 @@ control-plane
 !
 line con 0
  exec-timeout 0 0
+ privilege level 15
  logging synchronous
  stopbits 1
- no login
- privilege level 15
 line vty 0
  login local
 line vty 1
+ privilege level 15
  login local
  length 0
 line vty 2 4
@@ -3290,7 +3304,7 @@ end</entry>
     <node name="R12" type="SIMPLE" subtype="CSR1000v" location="650,47">
         <extensions>
             <entry key="config" type="String">!
-! Last configuration change at 21:30:14 UTC Fri Aug 31 2018
+! Last configuration change at 19:18:58 UTC Tue Sep 18 2018
 !
 version 16.6
 service timestamps debug datetime msec
@@ -3369,7 +3383,7 @@ crypto pki certificate chain TP-self-signed-324491363
 !
 !
 !
-license udi pid CSR1000V sn 9TE1QIM98HX
+license udi pid CSR1000V sn 92WICFQ0EQE
 diagnostic bootup level minimal
 spanning-tree extend system-id
 !
@@ -3398,6 +3412,9 @@ cdp run
 !
 !
 !
+!
+template peer-policy
+!
 ! 
 ! 
 !
@@ -3409,7 +3426,7 @@ interface Loopback0
  ospfv3 51 ipv6 area 0
 !
 interface GigabitEthernet1
- ip address 10.255.0.227 255.255.0.0
+ ip address 10.255.1.141 255.255.0.0
  shutdown
  negotiation auto
  no mop enabled
@@ -3494,23 +3511,32 @@ router ospf 51
  mpls ldp autoconfig area 0
 !
 router bgp 51
+ template peer-policy VPNV4_CLIENTS
+  route-reflector-client
+  send-community extended
+ exit-peer-policy
+ !
+ template peer-session IBGP_PEERS
+  remote-as 51
+  update-source Loopback0
+ exit-peer-session
+ !
  bgp router-id 12.12.12.12
  bgp log-neighbor-changes
  no bgp default ipv4-unicast
- neighbor VPNv4_Clients peer-group
- neighbor VPNv4_Clients remote-as 51
- neighbor VPNv4_Clients update-source Loopback0
- neighbor 11.11.11.11 peer-group VPNv4_Clients
- neighbor 22.22.22.22 peer-group VPNv4_Clients
+ neighbor 11.11.11.11 inherit peer-session IBGP_PEERS
+ neighbor 22.22.22.22 inherit peer-session IBGP_PEERS
  !
  address-family ipv4
  exit-address-family
  !
  address-family vpnv4
-  neighbor VPNv4_Clients send-community extended
-  neighbor VPNv4_Clients route-reflector-client
   neighbor 11.11.11.11 activate
+  neighbor 11.11.11.11 send-community extended
+  neighbor 11.11.11.11 inherit peer-policy VPNV4_CLIENTS
   neighbor 22.22.22.22 activate
+  neighbor 22.22.22.22 send-community extended
+  neighbor 22.22.22.22 inherit peer-policy VPNV4_CLIENTS
  exit-address-family
 !
 !
@@ -3538,13 +3564,13 @@ control-plane
 !
 line con 0
  exec-timeout 0 0
+ privilege level 15
  logging synchronous
  stopbits 1
- no login
- privilege level 15
 line vty 0
  login local
 line vty 1
+ privilege level 15
  login local
  length 0
 line vty 2 4
@@ -5201,6 +5227,7 @@ line con 0
         </extensions>
         <interface id="0" name="GigabitEthernet2"/>
     </node>
+    <annotations/>
     <connection dst="/virl:topology/virl:node[8]/virl:interface[1]" src="/virl:topology/virl:node[1]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[8]/virl:interface[2]" src="/virl:topology/virl:node[2]/virl:interface[1]"/>
     <connection dst="/virl:topology/virl:node[8]/virl:interface[3]" src="/virl:topology/virl:node[3]/virl:interface[1]"/>
